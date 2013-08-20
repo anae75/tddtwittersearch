@@ -1,6 +1,10 @@
+<ul>
 <% @results.each do |result| %>
+  <li class='result'>
   <%= result.text %>
+  </li>
 <% end %>
+</ul>
 
 <!-- refactor me!!! -->
 <%= form_for :search, url: searches_path do |f| %>
