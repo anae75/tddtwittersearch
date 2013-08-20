@@ -7,7 +7,7 @@ feature 'guest searches for term' do
     click_on 'Submit'
     
     expect(page).to have_content('#ruby')
-    page.should have_css("li.result", :count => 15)
+    page.should have_css("li.result", :count => 15, :text => /#ruby/i)
   
   end
 end
