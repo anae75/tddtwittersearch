@@ -4,7 +4,9 @@ class SearchesController < ApplicationController
   end
 
   def create
-    redirect_to search_path(params[:search][:search_term])
+    term = params[:search][:search_term]
+    term = term.gsub(/^#(.*)/, '\1')
+    redirect_to search_path(term)
   end
 
   def show
