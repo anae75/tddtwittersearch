@@ -7,9 +7,8 @@ feature 'guest searches for term' do
     click_on 'Submit'
     
     expect(page).to have_content('#ruby')
-    page.should have_css("li.result", :count => 15, :text => /#ruby/i)
-    current_path.should == search_path(:id => 'ruby')
-     
+    expect(page).to have_css("li.result", :count => 15, :text => /#ruby/i)
+    expect(current_path).to eq '/searches/ruby'
   end
 
   scenario 'search for term with #' do
@@ -19,8 +18,7 @@ feature 'guest searches for term' do
     
     expect(page).to have_content('#ruby')
     page.should have_css("li.result", :count => 15, :text => /#ruby/i)
-    current_path.should == search_path(:id => 'ruby')
-     
+    expect(current_path).to eq '/searches/ruby'
   end
 
 end
