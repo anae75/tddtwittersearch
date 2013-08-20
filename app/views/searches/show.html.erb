@@ -9,6 +9,6 @@
 <!-- refactor me!!! -->
 <%= form_for :search, url: searches_path do |f| %>
   <%= f.label :search_term %>
-  <%= f.text_field :search_term, {:class => "search_term"} %>
+  <%= f.text_field :search_term, {:value => @search_term, :class => "search_term"} %>
   <%= f.submit 'Submit' %>
 <% end %>

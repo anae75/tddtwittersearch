@@ -11,6 +11,7 @@ class SearchesController < ApplicationController
 
   def show
     term = '#' + params[:id]
+    @search_term = term
     @results = Twitter.search(term).results
   end
 

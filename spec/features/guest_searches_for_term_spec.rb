@@ -9,6 +9,7 @@ feature 'guest searches for term' do
     expect(page).to have_content('#ruby')
     expect(page).to have_css("li.result", :count => 15, :text => /#ruby/i)
     expect(current_path).to eq '/searches/ruby'
+    expect(page).to have_css("input[value='#ruby']")
   end
 
   scenario 'search for term with #' do
