@@ -8,6 +8,7 @@ feature 'guest searches for term' do
     
     expect(page).to have_content('#ruby')
     page.should have_css("li.result", :count => 15, :text => /#ruby/i)
-  
+    current_path.should == search_path(:id => 'ruby')
+     
   end
 end
