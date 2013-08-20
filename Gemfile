@@ -38,6 +38,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 2.2.0'
 end
 
+gem 'twitter'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

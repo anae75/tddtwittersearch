@@ -5,7 +5,7 @@ Tweetsearch::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'searches#new'
 
-  resources :searches, only: [:create]
+  resources :searches, only: [:create, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
